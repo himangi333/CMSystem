@@ -2,13 +2,12 @@
 Canteen management system is a web application
 
 ## Functionalities Implemented
-* Home
-* Add/delete items
-* Total sell
+* Admin dashboard 
+* Admin can see and edit/place orders 
+* Admin can add and update meals 
+* Home * Add/delete goods 
+* Total sold 
 * Guest users can add to cart and checkout
-* Admin dashboard
-* Admin can view and update/place orders
-* Admin can add and update meals
 
 
 
