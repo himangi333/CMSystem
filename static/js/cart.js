@@ -6,10 +6,8 @@ for( i = 0; i < updateBtns.length; i++)
         var productId = this.dataset.product
         var action = this.dataset.action
         console.log('productId:',productId,'Action:',action)
-    
-
         console.log('User:',user)
-        if (user == 'AnonymousUser') 
+        if (user == 'AnonymousUser')
         {
             //console.log('User is not authenticated')
             addCookieItem(productId, action)
@@ -46,12 +44,12 @@ function updateUserOrder(productId, action) {
 }
 
 //Guest user
-function addCookieItem(productId, action) 
+function addCookieItem(productId, action)
 {
     console.log('User is not authenticated')
 
 
-    if (action == 'add') 
+    if (action == 'add')
     {
         if (cart[productId] == undefined) {
             cart[productId] = { 'quantity': 1 }
@@ -61,7 +59,7 @@ function addCookieItem(productId, action)
         }
     }
 
-    if (action == 'remove') 
+    if (action == 'remove')
     {
         cart[productId]['quantity'] -= 1
 
@@ -71,7 +69,7 @@ function addCookieItem(productId, action)
         }
     }
 
-    if (action == 'delete') 
+    if (action == 'delete')
     {
         delete cart[productId];
     }
@@ -81,4 +79,3 @@ function addCookieItem(productId, action)
     location.reload()
 
 }
-

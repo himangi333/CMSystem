@@ -14,8 +14,8 @@ class CreateUserForm(UserCreationForm):
         model = User
         fields = ['username','email','password1','password2']
         widgets = {
-            'username': forms.TextInput(attrs={'placeholder': ' Enter Name'}),
-            'email': forms.TextInput(attrs={'placeholder': ' Enter Email'})
+            'username': forms.TextInput(attrs={'placeholder': ' Enter Your Name'}),
+            'email': forms.TextInput(attrs={'placeholder': ' Enter Your Email'})
         }
 
     def __init__(self, *args, **kwargs):
@@ -47,17 +47,17 @@ class CustomerForm(ModelForm):
             self.fields['email'].widget.attrs.update({
                 'class': 'form-control'
             })
-    
+
 class Order2Form(ModelForm):
     class Meta:
         model = Order
         fields = '__all__'
-        
+
 class ProductForm(ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-    
+
     def __init__(self, *args, **kwargs):
         super(ProductForm, self).__init__(*args, **kwargs)
         for field in iter(self.fields):
